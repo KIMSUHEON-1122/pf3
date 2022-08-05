@@ -1,0 +1,171 @@
+footer {
+ 
+  color: white;
+  background: black;
+  line-height: 1.7;
+}
+footer div.inner {
+  
+  height: 300px;
+  align-items: flex-start;
+  position: relative;
+}
+footer div.inner .more{
+  
+  font-size: 0;
+  box-sizing: border-box;
+  width: 50px;
+  height: 50px;
+  display: block;
+  position: absolute;
+  top: -25px;
+  left: calc(50% - 25px);
+  background-color: #111111;
+  color: white;
+}
+footer div.inner .more:hover span{
+  
+  animation-name: none;
+  display: none;
+}
+footer div.inner .more:hover{
+  background-color: #333333;
+}
+footer div.inner .more::before{
+  
+  transform: rotate(90deg) translateX(26px) translateY(-1px);
+  right: 10px;
+}
+footer div.inner .more::after{
+  
+  transform: rotate(315deg) translateX(-9px) translateY(4px);
+}
+footer div.inner h1 {
+  
+}
+footer div.inner .left {
+  
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+footer div.inner .left::after{
+  
+  content: "URBAN LAUNDERETTE";
+  width: 50%;
+  height: 100px;
+  color: #dda2a252;
+  position: absolute;
+  right: 0px;
+  font-weight: 900;
+  font-size: 60px;
+  top: 50px;
+  animation-name: ggam;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+}
+@keyframes ggam{
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+}
+  100%{
+    opacity: 0;
+  }
+}
+footer div.inner .left .tel {
+  
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 15px;
+}
+footer div.inner .left .tel p.phone {
+  
+}
+footer div.inner .left .tel p.phone strong {
+  
+  display: block;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 1;
+  margin: 12px 0px 26px;
+}
+footer div.inner .left address {
+  
+  color: #999;
+}
+footer div.inner .left ul.bnb::before{
+  
+  display: block;
+  border: 1px solid gray;
+  content: "";
+  position: absolute;
+  width: 100%;
+}
+footer div.inner .left ul.bnb {
+  
+  padding-top: 30px;
+  box-sizing: border-box;
+}
+footer div.inner .left ul.bnb li {
+  
+  color: white;
+  margin-top: 30px;
+}
+footer div.inner .left ul.bnb li a{
+  
+  padding: 15px 14px;
+  font-size: 14px;
+  color: white;
+}
+footer div.inner .left ul.bnb li:not(:first-child) a{
+  
+  color: gray;
+}
+footer div.inner .right {
+  
+  margin-right: 0;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+footer div.inner .right ul.sns {
+  
+  justify-content: flex-end;
+  gap: 10px;
+}
+footer div.inner .right ul.sns li {
+  
+}
+footer div.inner .right ul.sns li a {
+  
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+  width: 20px;
+  height: 20px;
+  font-size: 0;
+}
+footer div.inner .right ul.sns li:nth-child(1) a{
+  
+  background-image: url(../img/f.svg);
+}
+footer div.inner .right ul.sns li:nth-child(2) a{
+  
+  background-image: url(../img/i.svg);
+}
+footer div.inner .right ul.sns li:nth-child(3) a{
+  
+  background-image: url(../img/blog.svg);
+}
+footer div.inner .right .email {
+  
+  display: inline-block;
+  position: absolute;
+  right: 0;
+}
