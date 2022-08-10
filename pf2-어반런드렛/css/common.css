@@ -1,33 +1,18 @@
-a{
-  text-decoration: none;
-  
-}
 .hide{
   display: none;
-}
-input::placeholder{
-  color: gray;
-  font-size: 20px;
-  box-sizing: border-box;
-  width: 1000px;
-  /*! text-align: left; */
-  /*! width: 90%; */
 }
 input:focus::-webkit-input-placeholder,
 textarea:focus::-webkit-input-placeholder { /* WebKit browsers */
   color:transparent;
 }
-
 input:focus:-moz-placeholder,
 textarea:focus:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
   color:transparent;
 }
-
 input:focus::-moz-placeholder,
 textarea:focus::-moz-placeholder { /* Mozilla Firefox 19+ */
   color:transparent;
 }
-
 input:focus:-ms-input-placeholder,
 textarea:focus:-ms-input-placeholder { /* Internet Explorer 10+ */
   color:transparent;
@@ -36,28 +21,25 @@ textarea:focus:-ms-input-placeholder { /* Internet Explorer 10+ */
   width: 80%;
   margin: 0 auto;
 }
-.innerPadding{
-/*  카멜케이스방식 : 첫자는 소문자로 시작. 다른 단어 첫자는 대문자 */
-padding-top:20px;
-  padding-bottom:60px;
+.innerPadding{ /* 카멜케이스방식:첫자소문자로시작..다른단어첫자는 대문자로시작 */
+  padding-top:20px;
+  padding-bottom:60px; 
 }
 /* hn태그스타일링 */
 .h1{
   font-size: 80px;
   font-weight: 700;
-    font-family: 'Binggrae-Bold';
-  /*! font-family: 'Noto Sans KR', sans-serif; */ 
+  font-family: 'Binggrae-Bold';
 }
 .h2{
   font-size: 54px;
   font-weight: 700;
-    font-family: 'Binggrae-Bold';
-  /*! font-family: 'Noto Sans KR', sans-serif; */ 
+  font-family: 'Binggrae-Bold';
 }
 .h3{
   font-size: 31px;
   font-weight: 700;
-    font-family: 'Binggrae-Bold';
+  font-family: 'Binggrae-Bold';
 }
 .h4{
   font-size: 27px;
@@ -69,18 +51,16 @@ padding-top:20px;
 }
 /* flex */
 .flex{
-    display: flex;
-  }
+  display: flex;
+}
 .flexBetween{
   justify-content: space-between;
 }
 .flexAround{
   justify-content: space-around;
-/* 하나의 대상 양쪽에 균등하게 들어감 */
 }
 .flexEvenly{
   justify-content: space-evenly;
-/* 대상끼리 간격이 일정함   */
 }
 .flexCenter{
   justify-content: center;
@@ -100,7 +80,6 @@ padding-top:20px;
 .br{
   display: block;
 }
-
 .p{
   line-height: 1.5;
 }
@@ -109,68 +88,62 @@ padding-top:20px;
   padding: 50px;
 }
 .padding100{
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top:100px;
+  padding-bottom:100px;
 }
+
 /* 버튼 */
-.submit{
-  font-weight: bold;
-  background-color: #e82b27;
-  width: 130px;
+.btn1{
   height: 40px;
-  color: white;
+  width: 130px;
   text-align: center;
   line-height: 40px;
   border-radius: 20px;
+  background-color: red;
+  color: white;
   font-size: 14px;
 }
 /* 글자정렬 */
+
 .text-center{
   text-align: center;
 }
 
 /* 화살표 */
 .more {
+  position: relative;
   width: 100px;
   text-align: center;
-  font-weight: 600;
-  position: relative;
+  padding-right:30px
 }
 .more::before {
   content: "";
-  border: 1px solid;
-  position: absolute;
+  display: block;
   width: 30px;
-  transform: translateX(104px) translateY(3px);
+  height: 2px;
+  position: absolute;
+  right: 0;
+  top: calc(50% - 1px);
+  z-index: 1;
+  background-color:black;
+}
+.more::after{
+  content: "";
+  display:block;
+  width:8px;
+  height:8px;
+  border: 2px solid #333;
+  transform:rotate(45deg);
+  border-bottom:transparent;
+  border-left: transparent;
+  position:absolute;
+  right:0;
+  top:calc(50% - 5px);
 }
 
-.more::after {
-  content: "";
-  border: 2px solid;
-  width: 6px;
-  height: 6px;
-  position: absolute;
-  border-bottom: transparent;
-  border-left: transparent;
-  transform: translateY(0px) translateX(47px)rotate(45deg);
-}
-.pentagon {
-   width: 30px;
-  height: 30px;
-  background-image: url(../img/logo.svg);
-  background-size: cover;
-  position: absolute;
-  right: -60px;
-  top: calc(50% - 15px);
-  opacity: 0;
-  transition: all 0.3s;
-}
-.more:hover .pentagon {
-  display: block;
-  opacity: 1;
-    animation-name: moreRotate;
-  animation-duration: 1.5s;
-  animation-iteration-count: infinite;
-  transform-origin: center;
-  animation-timing-function: linear;
-}
+
+
+
+
+
+

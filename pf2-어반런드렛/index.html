@@ -14,14 +14,53 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/responsive.css">
-  
+    <link rel="stylesheet" href="css/ham.css">
+
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>어반런드렛</title>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // console.log($(window).height());
+            let n = 0; //변수 선언과 초기화
+            $("header .inner .wgnb a.ham").click(function () {
+                // 1번 if구문 이용
+                if (n == 0) {
+                    console.log(n);
+                    $("div.menuback").remove();
+                    $("#top").prepend("<div class = 'menuback'></div>");
+                    $(".menuback").css({ "height": $(window).height() });
+                    n = 1;
+                }else{
+                    console.log(n);
+                    $(".menuback").addClass("menubackmove");
+                    n = 0;
+                }
+                return false;
+                // console.log() : 콘솔창에 기록하라. (window의 높이값을)          
+                // "" 안 ""은 ''로 표시. 
+                // $(window).height() : 윈도우의 높이값을 가져와라
+                
+                
+                // //2번 transition 이용
+                // $("div.menuback").remove();
+                // $("#top").prepend("<div class = 'menuback'></div>");
+                // $(".menuback").css({"height": $(window).height() });
+                // if(n == 0){
+                //     n = 1;
+                // }else{
+                //     $(".menuback").addClass("menubackmove");
 
+                // }
+                //     return false;
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -180,7 +219,7 @@
             </div>
 
         </section>
-  
+
         <!-- BRAND STORY -->
         <section id="story">
             <div class="inner padding100 flex flexColumn flexAlignCenter">
@@ -244,7 +283,7 @@
         <section id="instagram">
             <div class="inner flex flexColumn flexCenter">
                 <h2 class="h2">INSTAGRAM</h2>
-                <ul class="contents flex flexBetween">
+                <ul class="contents flex flexBetween style=width:100%;">
                     <li>
                         <a href="">
                             <figure><img src="img/insta1.jpg" alt=""></figure>
@@ -322,7 +361,8 @@
                     <p>어반런드렛 더 테라스031-261-8725</p>
                     <p>어반런드렛 서초/청담1644-5982</p>
                 </div>
-                <address>(주)제이피 이노베이션경기도 성남시 수정구 창업로42, 경기기업성장센터 819호<br>사업자등록번호 456-87-00752대표이사 : 손수정</address>
+                <address>(주)제이피 이노베이션<span class="br"></span>경기도 성남시 수정구 창업로42, 경기기업성장센터 819호<br>사업자등록번호
+                    456-87-00752대표이사 : 손수정</address>
                 <ul class="bnb flex">
                     <li><a href="">개인정보처리방침</a></li>
                     <li><a href="">이용약관</a></li>

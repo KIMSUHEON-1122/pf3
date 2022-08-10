@@ -3,51 +3,48 @@ footer {
   color: white;
   background: black;
   line-height: 1.7;
+  position: relative;
 }
 footer div.inner {
   
-  height: 300px;
-  align-items: flex-start;
+  align-items: flex-end;
   position: relative;
 }
-footer div.inner .more{
+footer a.top{
   
   font-size: 0;
-  box-sizing: border-box;
   width: 50px;
   height: 50px;
-  display: block;
   position: absolute;
   top: -25px;
   left: calc(50% - 25px);
-  background-color: #111111;
-  color: white;
+  background-color: #000;
+  padding: 0;
+  transform: rotate(-90deg);
+  transition: all 0.5s;
 }
-footer div.inner .more:hover span{
+footer a.top:hover span{
   
   animation-name: none;
   display: none;
 }
-footer div.inner .more:hover{
-  background-color: #333333;
+footer a.top:hover{
+  background-color: #615e5e;
 }
-footer div.inner .more::before{
-  
-  transform: rotate(90deg) translateX(26px) translateY(-1px);
-  right: 10px;
+footer a.top::before{
+right: calc(50% - 15px);
+  background-color: white;
 }
-footer div.inner .more::after{
+footer a.top::after{
   
-  transform: rotate(315deg) translateX(-9px) translateY(4px);
+right: 10px;
+  border-color: white;
 }
 footer div.inner h1 {
   
 }
 footer div.inner .left {
   
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
 }
 footer div.inner .left::after{
   
@@ -78,9 +75,6 @@ footer div.inner .left::after{
 }
 footer div.inner .left .tel {
   
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
   font-size: 15px;
 }
 footer div.inner .left .tel p.phone {
@@ -89,27 +83,24 @@ footer div.inner .left .tel p.phone {
 footer div.inner .left .tel p.phone strong {
   
   display: block;
-  font-weight: 800;
   font-size: 40px;
   line-height: 1;
-  margin: 12px 0px 26px;
+  margin: 8px 0px 26px;
 }
 footer div.inner .left address {
   
   color: #999;
+  margin-bottom: 100px;
+  margin-top: 60px;
+  font-size: 14px;
 }
-footer div.inner .left ul.bnb::before{
-  
-  display: block;
-  border: 1px solid gray;
-  content: "";
-  position: absolute;
-  width: 100%;
+footer div.inner .left address span{
+display: none;
 }
+
 footer div.inner .left ul.bnb {
   
-  padding-top: 30px;
-  box-sizing: border-box;
+  transform: translateX(-14px);
 }
 footer div.inner .left ul.bnb li {
   
@@ -120,7 +111,6 @@ footer div.inner .left ul.bnb li a{
   
   padding: 15px 14px;
   font-size: 14px;
-  color: white;
 }
 footer div.inner .left ul.bnb li:not(:first-child) a{
   
@@ -128,16 +118,11 @@ footer div.inner .left ul.bnb li:not(:first-child) a{
 }
 footer div.inner .right {
   
-  margin-right: 0;
-  position: absolute;
-  right: 0;
-  bottom: 0;
 }
 
 footer div.inner .right ul.sns {
   
-  justify-content: flex-end;
-  gap: 10px;
+  margin-bottom: 100px;
 }
 footer div.inner .right ul.sns li {
   
@@ -163,9 +148,16 @@ footer div.inner .right ul.sns li:nth-child(3) a{
   
   background-image: url(../img/blog.svg);
 }
-footer div.inner .right .email {
-  
-  display: inline-block;
+footer div.inner .right > a.email{
+  color: #999;
+}
+footer div.inner .right > a.email::before{
+  content: "";
+  width: 100%;
   position: absolute;
-  right: 0;
+  border-top: 1px solid #ccc;
+  left: 0;
+  transform: translateY(-50px);
+}
+
 }

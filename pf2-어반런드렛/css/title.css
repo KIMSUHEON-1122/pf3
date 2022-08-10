@@ -15,33 +15,28 @@
   height: 100%;
   background-color: black;
 }
-
 #title .inner {
   width: 80%;
-  color: #eeeeee;
   position: relative;
   z-index: 1;
+  color: #fff;
   height: 673px;
 }
-
-#title .inner .h2 {
-  font-size: 65px;
-  z-index: 1;
-  margin-bottom: 20px;
+#title .inner h2{
   position: relative;
+  z-index: 1;
+  font-size: 65px;
+  margin-bottom: 20px;
   overflow: hidden;
 }
-
-#title .inner .h2 span{
-  animation-duration: 1.3s;
-    animation-name: h2up;
+#title .inner h2 span{
+  display: block;
+  animation-name: h2up;
+  animation-duration: 1s;
   animation-fill-mode: forwards;
   animation-direction: reverse;
-  animation-iteration-count: infinite;
   animation-timing-function: ease-out;
-  display: block;
 }
-
 @keyframes h2up{
   0%{
     transform: translateY(0);
@@ -50,39 +45,37 @@
   100%{
     transform: translateY(100%);
     opacity: 0.4;
+  }
 }
-}
-#title .inner p {
+#title .inner p{
   position: relative;
   z-index: 1;
-  
   overflow: hidden;
 }
-#title .inner .p span{
+#title .inner p span{
   display: block;
   animation-name: pup;
-  animation-delay: 0.3s;
-  animation-duration: 1.5s;
+  animation-duration: 1.3s;
   animation-fill-mode: forwards;
   animation-direction: reverse;
-  animation-iteration-count: infinite;
   animation-timing-function: ease-out;
-/* block요소여야 애니메이션 적용 */
 }
 @keyframes pup{
   0%{
-    opacity: 1;
     transform: translateY(0);
+    opacity: 1;
   }
   50%{
-   transform: translateY(100%);
+    transform: translateY(100%);
   }
   100%{
-opacity: 0;
     transform: translateY(100%);
+     opacity: 0;
+  }
 }
-}
+#title .inner br{
 
+}
 #title .inner iframe{
   width: 1188px;
   height: 673px;
@@ -91,9 +84,8 @@ opacity: 0;
   right: 0;
 }
 #title span.titleaside{
-  
   position: absolute;
-  right: calc((20% / 4) - 82px);
+  right: calc(20% / 4 - 82px);
   bottom: 60px;
   display: flex;
   flex-direction: column;
@@ -102,92 +94,89 @@ opacity: 0;
   justify-content: space-between;
   width: 164px;
 }
-
-#title span.titleaside a.campaign{
-  
+#title .titleaside a.campaign{
   transform: rotate(90deg) translateX(78px);
-  transform-origin: 50% 50%;
-  color: #aaa;
-  font-weight: 700;
 }
-
 #title span.titleaside a.scroll{
-  
-  font-size: 20px;
+  font-size:12px; 
   position: relative;
+  text-transform: uppercase;
   animation-name: textcolor;
-  animation-duration: 1s;
+  animation-duration: 2s;
   animation-iteration-count: infinite;
 }
 @keyframes textcolor{
   0%{
-    color: #000;
+   color:black;
   }
-  19%{
-   
-  color: #aaa;
-}
+  15%{
+   color:yellowgreen;
+  }
+  30%{
+   color:black;
+  }
   100%{
-    color:#000;
+    color:black;
   }
 }
 #title span.titleaside a.scroll::before{
   content: "";
   width: 15px;
   height: 15px;
-  border: 3px solid;
   display: block;
+  position: absolute;
+  top: -13px;
+  border: 3px solid;
   border-left: transparent;
   border-top: transparent;
-  transform: scale(0.5) translateY(-10px)rotate(45deg);
-  top: -30px;
-  position: absolute;
+  transform:scale(0.5) translateY(-15px) rotate(45deg);
   color: #000;
-  animation-name: scrollani1;
-  animation-iteration-count: infinite;
-  animation-duration: 1s;
   left: calc(50% - 7.5px);
+  animation-name: scrollani1;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 }
 @keyframes scrollani1{
   0%{
-  opacity: 0;
+    opacity: 0;
   }
   10%{
-opacity: 1;
+    opacity: 0;
   }
-
+   20%{
+    opacity: 1;
+  }
   100%{
-opacity: 0;
+    opacity: 0;
   }
 }
 #title span.titleaside a.scroll::after{
   content: "";
   width: 15px;
   height: 15px;
-  border: 3px solid;
   display: block;
+  position: absolute;
+  top: -22px;
+  border: 3px solid;
   border-left: transparent;
   border-top: transparent;
-  transform: scale(0.5) translateY(-10px)rotate(45deg);
-  top: -20px;
-  position: absolute;
-  color: #999;
-  animation-name: scrollani2;
-  animation-iteration-count: infinite;
-  animation-duration: 1s;
+  transform:scale(0.5) translateY(-15px) rotate(45deg);
+  color: #333;
   left: calc(50% - 7.5px);
+  animation-name: scrollani2;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 }
-
 @keyframes scrollani2{
   0%{
-  opacity: 0;
+    opacity: 0;
   }
   10%{
-    
-opacity: 1;
+    opacity: 1;
   }
-
   100%{
-opacity: 0;
+    opacity: 0;
   }
 }
+
+
